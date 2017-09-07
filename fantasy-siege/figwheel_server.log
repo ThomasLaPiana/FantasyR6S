@@ -1,0 +1,1145 @@
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/navbar.cljs   line:6  column:27  ----[0m
+
+  [1mNo such namespace: session, could not locate session.cljs, session.cljc, or JavaScript source providing "session"[0m
+
+  [36m 2[0m  [36m  {:require [reagent.core :as r]})[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m(defn nav-link [uri title page collapsed?][0m
+  [36m 5[0m  [36m  [:li.nav-item[0m
+  [33m 6[0m  [1m   {:class (when (= page (session/get :page)) "active")}[0m
+  [0m  [0m  [33m                          ^--- No such namespace: session, could not locate session.cljs, session.cljc, or JavaScript source providing "session"[0m
+  [36m 7[0m  [36m   [:a.nav-link[0m
+  [36m 8[0m  [36m    {:href uri[0m
+  [36m 9[0m  [36m     :on-click #(reset! collapsed? true)} title]])[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn navbar [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/navbar.cljs   line:6  column:27  ----[0m
+
+  [1mUse of undeclared Var session/get[0m
+
+  [36m 2[0m  [36m  {:require [reagent.core :as r]})[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m(defn nav-link [uri title page collapsed?][0m
+  [36m 5[0m  [36m  [:li.nav-item[0m
+  [33m 6[0m  [1m   {:class (when (= page (session/get :page)) "active")}[0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var session/get[0m
+  [36m 7[0m  [36m   [:a.nav-link[0m
+  [36m 8[0m  [36m    {:href uri[0m
+  [36m 9[0m  [36m     :on-click #(reset! collapsed? true)} title]])[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn navbar [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/navbar.cljs   line:12  column:21  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m 8[0m  [36m    {:href uri[0m
+  [36m 9[0m  [36m     :on-click #(reset! collapsed? true)} title]])[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn navbar [][0m
+  [33m12[0m  [1m  (let [collapsed? (r/atom true)][0m
+  [0m  [0m  [33m                    ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m13[0m  [36m    (fn [][0m
+  [36m14[0m  [36m      [:nav.navbar.navbar-dark.bg-primary[0m
+  [36m15[0m  [36m       [:button.navbar-toggler.hidden-sm-up[0m
+  [36m16[0m  [36m        {:on-click #(swap! collapsed? not)} "☰"][0m
+  [36m17[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/navbar.cljs   line:12  column:21  ----[0m
+
+  [1mUse of undeclared Var r/atom[0m
+
+  [36m 8[0m  [36m    {:href uri[0m
+  [36m 9[0m  [36m     :on-click #(reset! collapsed? true)} title]])[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn navbar [][0m
+  [33m12[0m  [1m  (let [collapsed? (r/atom true)][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var r/atom[0m
+  [36m13[0m  [36m    (fn [][0m
+  [36m14[0m  [36m      [:nav.navbar.navbar-dark.bg-primary[0m
+  [36m15[0m  [36m       [:button.navbar-toggler.hidden-sm-up[0m
+  [36m16[0m  [36m        {:on-click #(swap! collapsed? not)} "☰"][0m
+  [36m17[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.377 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.303 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/core.cljs   line:60  column:3  ----[0m
+
+  [1mUnable to resolve var: navbar in this context at line 60 src/cljs/fantasy_siege/core.cljs[0m
+
+  [36m59[0m  [36m(defn mount-components [][0m
+  [33m60[0m  [1m  (r/render [#'navbar] (.getElementById js/document "navbar"))[0m
+  [0m  [0m  [33m  ^--- Unable to resolve var: navbar in this context at line 60 src/cljs/fantasy_siege/core.cljs[0m
+  [36m61[0m  [36m  (r/render [#'page] (.getElementById js/document "app")))[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m(defn init! [][0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 2.474 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/core.cljs  ----[0m
+
+  [1mNo such namespace: fantasy-siege, could not locate fantasy_siege.cljs, fantasy_siege.cljc, or JavaScript source providing "fantasy-siege" [0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/navbar.cljs   line:6  column:27  ----[0m
+
+  [1mNo such namespace: session, could not locate session.cljs, session.cljc, or JavaScript source providing "session"[0m
+
+  [36m 2[0m  [36m  {:require [reagent.core :as r]})[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m(defn nav-link [uri title page collapsed?][0m
+  [36m 5[0m  [36m  [:li.nav-item[0m
+  [33m 6[0m  [1m   {:class (when (= page (session/get :page)) "active")}[0m
+  [0m  [0m  [33m                          ^--- No such namespace: session, could not locate session.cljs, session.cljc, or JavaScript source providing "session"[0m
+  [36m 7[0m  [36m   [:a.nav-link[0m
+  [36m 8[0m  [36m    {:href uri[0m
+  [36m 9[0m  [36m     :on-click #(reset! collapsed? true)} title]])[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn navbar [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/navbar.cljs   line:6  column:27  ----[0m
+
+  [1mUse of undeclared Var session/get[0m
+
+  [36m 2[0m  [36m  {:require [reagent.core :as r]})[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m(defn nav-link [uri title page collapsed?][0m
+  [36m 5[0m  [36m  [:li.nav-item[0m
+  [33m 6[0m  [1m   {:class (when (= page (session/get :page)) "active")}[0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var session/get[0m
+  [36m 7[0m  [36m   [:a.nav-link[0m
+  [36m 8[0m  [36m    {:href uri[0m
+  [36m 9[0m  [36m     :on-click #(reset! collapsed? true)} title]])[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn navbar [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/navbar.cljs   line:12  column:21  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+
+  [36m 8[0m  [36m    {:href uri[0m
+  [36m 9[0m  [36m     :on-click #(reset! collapsed? true)} title]])[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn navbar [][0m
+  [33m12[0m  [1m  (let [collapsed? (r/atom true)][0m
+  [0m  [0m  [33m                    ^--- No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"[0m
+  [36m13[0m  [36m    (fn [][0m
+  [36m14[0m  [36m      [:nav.navbar.navbar-dark.bg-primary[0m
+  [36m15[0m  [36m       [:button.navbar-toggler.hidden-sm-up[0m
+  [36m16[0m  [36m        {:on-click #(swap! collapsed? not)} "☰"][0m
+  [36m17[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/navbar.cljs   line:12  column:21  ----[0m
+
+  [1mUse of undeclared Var r/atom[0m
+
+  [36m 8[0m  [36m    {:href uri[0m
+  [36m 9[0m  [36m     :on-click #(reset! collapsed? true)} title]])[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn navbar [][0m
+  [33m12[0m  [1m  (let [collapsed? (r/atom true)][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var r/atom[0m
+  [36m13[0m  [36m    (fn [][0m
+  [36m14[0m  [36m      [:nav.navbar.navbar-dark.bg-primary[0m
+  [36m15[0m  [36m       [:button.navbar-toggler.hidden-sm-up[0m
+  [36m16[0m  [36m        {:on-click #(swap! collapsed? not)} "☰"][0m
+  [36m17[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 3.352 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.015 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/navbar.cljs   line:1  column:1  ----[0m
+
+  [1mOnly :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported. Got [reagent.session :as session] instead. at line 1 src/cljs/fantasy_siege/navbar.cljs[0m
+
+  [33m1[0m  [1m(ns fantasy-siege.navbar[0m
+  [0m [0m  [33m^--- Only :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported. Got [reagent.session :as session] instead. at line 1 src/cljs/fantasy_siege/navbar.cljs[0m
+  [36m2[0m  [36m  (:require [reagent.core :as r])[0m
+  [36m3[0m  [36m            [reagent.session :as session])[0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.477 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.34 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/home.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.316 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/home.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.008 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/core.cljs   line:1  column:1  ----[0m
+
+  [1mDon't know how to create ISeq from: clojure.lang.Symbol[0m
+
+  [33m1[0m  [1m(ns fantasy-siege.core[0m
+  [0m [0m  [33m^--- Don't know how to create ISeq from: clojure.lang.Symbol[0m
+  [36m2[0m  [36m  (:require [reagent.core :as r][0m
+  [36m3[0m  [36m            [reagent.session :as session][0m
+  [36m4[0m  [36m            [secretary.core :as secretary :include-macros true][0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.348 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.195 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/navbar.cljs   line:23 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/navbar.cljs [line 23, col 1] Unexpected EOF while reading item 2 of vector, starting at line 21 and column 9.[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/navbar.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.173 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/core.cljs   line:13  column:1  ----[0m
+
+  [1mUnable to resolve var: about-page in this context at line 13 src/cljs/fantasy_siege/core.cljs[0m
+
+  [36m11[0m  [36m  (:import goog.History))[0m
+  [36m12[0m  [36m[0m
+  [33m13[0m  [1m(def pages[0m
+  [0m  [0m  [33m^--- Unable to resolve var: about-page in this context at line 13 src/cljs/fantasy_siege/core.cljs[0m
+  [36m14[0m  [36m  {:home #'home-page[0m
+  [36m15[0m  [36m   :about #'about-page})[0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.299 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.261 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.237 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.265 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.225 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.153 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/dashboard.cljs   line:5  column:1  ----[0m
+
+  [1mUnsupported binding key: :div[0m
+
+  [36m3[0m  [36m            [reagent.session :as session]))[0m
+  [36m4[0m  [36m[0m
+  [33m5[0m  [1m(defn player-list[0m
+  [0m [0m  [33m^--- Unsupported binding key: :div[0m
+  [36m6[0m  [36m  "list the players that this user recruited"[0m
+  [36m7[0m  [36m  [:div "This is a list of players"])[0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/dashboard.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.195 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/dashboard.cljs   line:5  column:1  ----[0m
+
+  [1mUnsupported binding key: :div[0m
+
+  [36m3[0m  [36m            [reagent.session :as session]))[0m
+  [36m4[0m  [36m[0m
+  [33m5[0m  [1m(defn player-list[0m
+  [0m [0m  [33m^--- Unsupported binding key: :div[0m
+  [36m6[0m  [36m  "list the players that this user recruited"[0m
+  [36m7[0m  [36m  [:div "This is a list of players"])[0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/dashboard.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.203 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/core.cljs  ----[0m
+
+  [1mInvalid :refer, var fantasy-siege.user/user-dashboard does not exist [0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 2.647 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/user.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.239 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/user.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.301 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/user.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.219 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.229 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.232 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.237 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.242 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.24 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.235 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.221 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.223 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.127 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/core.cljs   line:15  column:1  ----[0m
+
+  [1mToo many arguments to def at line 15 /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/core.cljs[0m
+
+  [36m13[0m  [36m  (:import goog.History))[0m
+  [36m14[0m  [36m[0m
+  [33m15[0m  [1m(def pages[0m
+  [0m  [0m  [33m^--- Too many arguments to def at line 15 /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/core.cljs[0m
+  [36m16[0m  [36m  {:home #'user-dashboard}[0m
+  [36m17[0m  [36m  {:upload #'upload-form})[0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.235 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.128 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/core.cljs   line:15  column:1  ----[0m
+
+  [1mToo many arguments to def at line 15 /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/core.cljs[0m
+
+  [36m13[0m  [36m  (:import goog.History))[0m
+  [36m14[0m  [36m[0m
+  [33m15[0m  [1m(def pages[0m
+  [0m  [0m  [33m^--- Too many arguments to def at line 15 /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/core.cljs[0m
+  [36m16[0m  [36m  {:home #'user-dashboard}[0m
+  [36m17[0m  [36m  {:upload #'upload-form})[0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.234 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:13  column:46  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/parse-contact[0m
+
+  [36m 9[0m  [36m[:input  {:type  "text"[0m
+  [36m10[0m  [36m          :placeholder  "Contact Name"[0m
+  [36m11[0m  [36m          :value @val[0m
+  [36m12[0m  [36m          :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [33m13[0m  [1m[:button  {:on-click #(when-let  [c  (parse-contact @val)][0m
+  [0m  [0m  [33m                                      ^--- Use of undeclared Var fantasy-siege.upload/parse-contact[0m
+  [36m14[0m  [36m                        (add-contact! c)[0m
+  [36m15[0m  [36m                        (reset! val  ""))} [0m
+  [36m16[0m  [36m "Add"]])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:14  column:33  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/add-contact![0m
+
+  [36m10[0m  [36m          :placeholder  "Contact Name"[0m
+  [36m11[0m  [36m          :value @val[0m
+  [36m12[0m  [36m          :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [36m13[0m  [36m[:button  {:on-click #(when-let  [c  (parse-contact @val)][0m
+  [33m14[0m  [1m                        (add-contact! c)[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var fantasy-siege.upload/add-contact![0m
+  [36m15[0m  [36m                        (reset! val  ""))} [0m
+  [36m16[0m  [36m "Add"]])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.244 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:14  column:46  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/parse-contact[0m
+
+  [36m10[0m  [36m[:input  {:type  "text"[0m
+  [36m11[0m  [36m          :placeholder  "Paste as CSV format"[0m
+  [36m12[0m  [36m          :value @val[0m
+  [36m13[0m  [36m          :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [33m14[0m  [1m[:button  {:on-click #(when-let  [c  (parse-contact @val)][0m
+  [0m  [0m  [33m                                      ^--- Use of undeclared Var fantasy-siege.upload/parse-contact[0m
+  [36m15[0m  [36m                        (add-contact! c)[0m
+  [36m16[0m  [36m                        (reset! val  ""))}[0m
+  [36m17[0m  [36m "Add"]])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:15  column:33  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/add-contact![0m
+
+  [36m11[0m  [36m          :placeholder  "Paste as CSV format"[0m
+  [36m12[0m  [36m          :value @val[0m
+  [36m13[0m  [36m          :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [36m14[0m  [36m[:button  {:on-click #(when-let  [c  (parse-contact @val)][0m
+  [33m15[0m  [1m                        (add-contact! c)[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var fantasy-siege.upload/add-contact![0m
+  [36m16[0m  [36m                        (reset! val  ""))}[0m
+  [36m17[0m  [36m "Add"]])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.248 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.221 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.21 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.138 seconds.[0m
+[36m----  Could not Analyze  src/cljs/fantasy_siege/core.cljs  ----[0m
+
+  [1mInvalid :refer, var fantasy-siege.upload/upload-form does not exist [0m
+
+[36m----  Analysis Error : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.219 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.245 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.24 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.216 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.252 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.212 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.229 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:21  column:9  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/jej[0m
+
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [36m18[0m  [36m       [:button "Upload"]])))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [33m21[0m  [1m  [:div jej what is this shit][0m
+  [0m  [0m  [33m        ^--- Use of undeclared Var fantasy-siege.upload/jej[0m
+  [36m22[0m  [36m  [upload-title][0m
+  [36m23[0m  [36m  [upload-box])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:21  column:13  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/what[0m
+
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [36m18[0m  [36m       [:button "Upload"]])))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [33m21[0m  [1m  [:div jej what is this shit][0m
+  [0m  [0m  [33m            ^--- Use of undeclared Var fantasy-siege.upload/what[0m
+  [36m22[0m  [36m  [upload-title][0m
+  [36m23[0m  [36m  [upload-box])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:21  column:18  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/is[0m
+
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [36m18[0m  [36m       [:button "Upload"]])))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [33m21[0m  [1m  [:div jej what is this shit][0m
+  [0m  [0m  [33m                 ^--- Use of undeclared Var fantasy-siege.upload/is[0m
+  [36m22[0m  [36m  [upload-title][0m
+  [36m23[0m  [36m  [upload-box])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:21  column:21  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/this[0m
+
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [36m18[0m  [36m       [:button "Upload"]])))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [33m21[0m  [1m  [:div jej what is this shit][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var fantasy-siege.upload/this[0m
+  [36m22[0m  [36m  [upload-title][0m
+  [36m23[0m  [36m  [upload-box])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:21  column:26  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/shit[0m
+
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [36m18[0m  [36m       [:button "Upload"]])))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [33m21[0m  [1m  [:div jej what is this shit][0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var fantasy-siege.upload/shit[0m
+  [36m22[0m  [36m  [upload-title][0m
+  [36m23[0m  [36m  [upload-box])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.305 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.217 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.233 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.218 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.224 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.218 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.224 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.224 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.214 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.234 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.213 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.231 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.22 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.23 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.223 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.212 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.226 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.222 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.215 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.228 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.122 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:18 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 18, col 32] Unmatched delimiter ].[0m
+
+  [36m16[0m  [36m                 :value @val[0m
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [33m18[0m  [1m       [:div>button "Upload"]]])))[0m
+  [0m  [0m  [33m       /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 18, col 32] Unmatched delimiter ].[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [36m21[0m  [36m  [:div.upload-form[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.125 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:18 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 18, col 32] Unmatched delimiter ].[0m
+
+  [36m16[0m  [36m                 :value @val[0m
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [33m18[0m  [1m       [:div<button "Upload"]]])))[0m
+  [0m  [0m  [33m       /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 18, col 32] Unmatched delimiter ].[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [36m21[0m  [36m  [:div.upload-form[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:18  column:15  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/button[0m
+
+  [36m14[0m  [36m       [:textarea {:type  "text"[0m
+  [36m15[0m  [36m                 :placeholder  "Paste as CSV format"[0m
+  [36m16[0m  [36m                 :value @val[0m
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [33m18[0m  [1m       [:div [button "Upload"]]])))[0m
+  [0m  [0m  [33m              ^--- Use of undeclared Var fantasy-siege.upload/button[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [36m21[0m  [36m  [:div.upload-form[0m
+  [36m22[0m  [36m   [upload-title][0m
+  [36m23[0m  [36m   [upload-box]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.256 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.125 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:18 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 18, col 33] Unmatched delimiter ].[0m
+
+  [36m16[0m  [36m                 :value @val[0m
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [33m18[0m  [1m       [:div>:button "Upload"]]])))[0m
+  [0m  [0m  [33m       /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 18, col 33] Unmatched delimiter ].[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [36m21[0m  [36m  [:div.upload-form[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.141 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:18 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 18, col 33] Unmatched delimiter ].[0m
+
+  [36m16[0m  [36m                 :value @val[0m
+  [36m17[0m  [36m                 :on-change #(reset! val  (-> % .-target .-value))}][0m
+  [33m18[0m  [1m       [:div<:button "Upload"]]])))[0m
+  [0m  [0m  [33m       /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 18, col 33] Unmatched delimiter ].[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(defn upload-form [][0m
+  [36m21[0m  [36m  [:div.upload-form[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.218 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.22 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.217 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.295 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.225 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/navbar.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.223 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.224 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.226 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.212 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.219 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.226 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.21 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.217 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.213 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:21  column:23  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/send-upload-data![0m
+
+  [36m17[0m  [36m                 :on-change #(reset! input  (-> % .-target .-value))}][0m
+  [36m18[0m  [36m       [:div[0m
+  [36m19[0m  [36m        [:button.btn.btn-primary [0m
+  [36m20[0m  [36m         {:type :submit[0m
+  [33m21[0m  [1m          :on-click #(send-upload-data! input)[0m
+  [0m  [0m  [33m                      ^--- Use of undeclared Var fantasy-siege.upload/send-upload-data![0m
+  [36m22[0m  [36m          :value "Upload"}]]])))[0m
+  [36m23[0m  [36m[0m
+  [36m24[0m  [36m(defn upload-form [][0m
+  [36m25[0m  [36m  [:div.upload-form[0m
+  [36m26[0m  [36m   [upload-title][0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.25 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.221 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.217 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.217 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.225 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.218 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.234 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.235 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.274 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.247 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.216 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.214 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.225 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/core.cljs   line:51  column:4  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.core/fetch-docs![0m
+
+  [36m47[0m  [36m  (r/render [#'page] (.getElementById js/document "app")))[0m
+  [36m48[0m  [36m[0m
+  [36m49[0m  [36m(defn init! [][0m
+  [36m50[0m  [36m  (load-interceptors!)[0m
+  [33m51[0m  [1m  (fetch-docs!)[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var fantasy-siege.core/fetch-docs![0m
+  [36m52[0m  [36m  (hook-browser-navigation!)[0m
+  [36m53[0m  [36m  (mount-components))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.234 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/core.cljs   line:51  column:4  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.core/fetch-docs![0m
+
+  [36m47[0m  [36m  (r/render [#'page] (.getElementById js/document "app")))[0m
+  [36m48[0m  [36m[0m
+  [36m49[0m  [36m(defn init! [][0m
+  [36m50[0m  [36m  (load-interceptors!)[0m
+  [33m51[0m  [1m  (fetch-docs!)[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var fantasy-siege.core/fetch-docs![0m
+  [36m52[0m  [36m  (hook-browser-navigation!)[0m
+  [36m53[0m  [36m  (mount-components))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.235 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.215 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.22 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.226 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.23 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.217 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.241 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.224 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.228 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.243 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.222 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.231 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.236 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:11 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 11, col 63] Unmatched delimiter }.[0m
+
+  [36m 9[0m  [36m         :params @data[0m
+  [36m10[0m  [36m         :handler #(.log js/console (str "response:" %))[0m
+  [33m11[0m  [1m         :error-handler #(.error js/console (str "error:" %))}))[0m
+  [0m  [0m  [33m         /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 11, col 63] Unmatched delimiter }.[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn upload-title [][0m
+  [36m14[0m  [36m  "Contains the title of the upload page"[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.424 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.206 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:11 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 11, col 63] Unmatched delimiter }.[0m
+
+  [36m 9[0m  [36m         :params @data[0m
+  [36m10[0m  [36m         :handler #(.log js/console (str "response:" %))[0m
+  [33m11[0m  [1m         :error-handler #(.error js/console (str "error:" %))}))[0m
+  [0m  [0m  [33m         /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 11, col 63] Unmatched delimiter }.[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn upload-title [][0m
+  [36m14[0m  [36m  "Contains the title of the upload page"[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.38 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.332 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.318 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.307 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.165 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:33 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 33, col 1] Unexpected EOF while reading item 8 of list, starting at line 6 and column 1.[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.308 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.321 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.299 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.276 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.277 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.276 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.285 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.24 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.264 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:8  column:4  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/GET[0m
+
+  [36m 4[0m  [36m            [ajax.core :refer [POST]]))[0m
+  [36m 5[0m  [36m[0m
+  [36m 6[0m  [36m(defn send-upload-data! [data][0m
+  [36m 7[0m  [36m  "POST the data to be uploaded"[0m
+  [33m 8[0m  [1m  (GET "/"))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var fantasy-siege.upload/GET[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(defn upload-title [][0m
+  [36m11[0m  [36m  "Contains the title of the upload page"[0m
+  [36m12[0m  [36m  [:div.upload-title "Upload New Player Data Here"])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.289 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.25 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.224 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.257 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.279 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.223 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.242 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.231 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.251 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:13  column:30  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/errors[0m
+
+  [36m 9[0m  [36m{:headers  {"Accept"       "application/transit+json"[0m
+  [36m10[0m  [36m            "x-csrf-token"  (.-value  (.getElementById js/document  "token"))}[0m
+  [36m11[0m  [36m :params @data[0m
+  [36m12[0m  [36m :handler #(do[0m
+  [33m13[0m  [1m             (reset! errors nil)[0m
+  [0m  [0m  [33m                     ^--- Use of undeclared Var fantasy-siege.upload/errors[0m
+  [36m14[0m  [36m             (swap! messages conj  (assoc @fields :timestamp  (js/Date.))))[0m
+  [36m15[0m  [36m :error-handler #(do[0m
+  [36m16[0m  [36m                   (.log js/console  (str %))[0m
+  [36m17[0m  [36m                   (reset! errors  (get-in %  [:response :errors])))}))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:14  column:29  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/messages[0m
+
+  [36m10[0m  [36m                    "x-csrf-token"  (.-value  (.getElementById js/document  "token"))}[0m
+  [36m11[0m  [36m         :params @data[0m
+  [36m12[0m  [36m         :handler #(do[0m
+  [36m13[0m  [36m                     (reset! errors nil)[0m
+  [33m14[0m  [1m                     (swap! messages conj  (assoc @fields :timestamp  (js/Date.))))[0m
+  [0m  [0m  [33m                            ^--- Use of undeclared Var fantasy-siege.upload/messages[0m
+  [36m15[0m  [36m         :error-handler #(do[0m
+  [36m16[0m  [36m                           (.log js/console  (str %))[0m
+  [36m17[0m  [36m                           (reset! errors  (get-in %  [:response :errors])))}))[0m
+  [36m18[0m  [36m[0m
+  [36m19[0m  [36m(defn upload-title [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:14  column:52  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/fields[0m
+
+  [36m10[0m  [36m                    "x-csrf-token"  (.-value  (.getElementById js/document  "token"))}[0m
+  [36m11[0m  [36m         :params @data[0m
+  [36m12[0m  [36m         :handler #(do[0m
+  [36m13[0m  [36m                     (reset! errors nil)[0m
+  [33m14[0m  [1m                     (swap! messages conj  (assoc @fields :timestamp  (js/Date.))))[0m
+  [0m  [0m  [33m                                                   ^--- Use of undeclared Var fantasy-siege.upload/fields[0m
+  [36m15[0m  [36m         :error-handler #(do[0m
+  [36m16[0m  [36m                           (.log js/console  (str %))[0m
+  [36m17[0m  [36m                           (reset! errors  (get-in %  [:response :errors])))}))[0m
+  [36m18[0m  [36m[0m
+  [36m19[0m  [36m(defn upload-title [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/fantasy_siege/upload.cljs   line:17  column:36  ----[0m
+
+  [1mUse of undeclared Var fantasy-siege.upload/errors[0m
+
+  [36m13[0m  [36m                     (reset! errors nil)[0m
+  [36m14[0m  [36m                     (swap! messages conj  (assoc @fields :timestamp  (js/Date.))))[0m
+  [36m15[0m  [36m         :error-handler #(do[0m
+  [36m16[0m  [36m                           (.log js/console  (str %))[0m
+  [33m17[0m  [1m                           (reset! errors  (get-in %  [:response :errors])))}))[0m
+  [0m  [0m  [33m                                   ^--- Use of undeclared Var fantasy-siege.upload/errors[0m
+  [36m18[0m  [36m[0m
+  [36m19[0m  [36m(defn upload-title [][0m
+  [36m20[0m  [36m  "Contains the title of the upload page"[0m
+  [36m21[0m  [36m  [:div.upload-title "Upload New Player Data Here"])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.285 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.126 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:39 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 39, col 1] Unexpected EOF while reading item 8 of list, starting at line 6 and column 1.[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.123 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:39 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 39, col 1] Unexpected EOF while reading item 8 of list, starting at line 6 and column 1.[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.139 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:42 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 42, col 1] Unexpected EOF while reading item 8 of list, starting at line 6 and column 1.[0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.242 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.238 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.229 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.22 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.232 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.245 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.124 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:36 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 36, col 44] Unmatched delimiter }.[0m
+
+  [36m34[0m  [36m         {:type :submit[0m
+  [36m35[0m  [36m          :on-click (do #(send-upload-data! input)[0m
+  [33m36[0m  [1m                        #(reset! input "")}[0m
+  [0m  [0m  [33m                        /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 36, col 44] Unmatched delimiter }.[0m
+  [36m37[0m  [36m         "Upload"]]])))[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m(defn upload-form [][0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.134 seconds.[0m
+[36m----  Could not Read  src/cljs/fantasy_siege/upload.cljs   line:36 ----[0m
+
+  [1m/home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 36, col 59] Unmatched delimiter }.[0m
+
+  [36m34[0m  [36m         {:type :submit[0m
+  [36m35[0m  [36m          :on-click (do #(send-upload-data! input)[0m
+  [33m36[0m  [1m                        #(reset! input (-> % "" .-value))}[0m
+  [0m  [0m  [33m                        /home/thomas/Documents/GitHub/FantasyR6S/fantasy-siege/src/cljs/fantasy_siege/upload.cljs [line 36, col 59] Unmatched delimiter }.[0m
+  [36m37[0m  [36m         "Upload"]]])))[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m(defn upload-form [][0m
+
+[36m----  Reader Error : Please see src/cljs/fantasy_siege/upload.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.248 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.222 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.225 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.241 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.232 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/fantasy_siege/upload.js

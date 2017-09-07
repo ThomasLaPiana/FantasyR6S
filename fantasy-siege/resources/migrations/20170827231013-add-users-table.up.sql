@@ -7,3 +7,18 @@ CREATE TABLE users
  last_login TIME,
  is_active BOOLEAN,
  pass VARCHAR(300));
+
+CREATE TABLE teams
+(id SERIAL PRIMARY KEY,
+  name VARCHAR(50) PRIMARY KEY)
+
+CREATE TABLE players
+(id VARCHAR(50) PRIMARY KEY,
+  alias VARCHAR(50),
+  team VARCHAR(50) REFERENCES teams(id))
+
+CREATE TABLE matches
+(id VARCHAR(30) PRIMARY KEY,
+  year INTEGER,
+  season INTEGER,
+  week INTEGER)
