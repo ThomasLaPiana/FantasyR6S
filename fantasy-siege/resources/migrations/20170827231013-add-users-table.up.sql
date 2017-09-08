@@ -9,16 +9,15 @@ CREATE TABLE users
  pass VARCHAR(300));
 
 CREATE TABLE teams
-(id SERIAL PRIMARY KEY,
-  name VARCHAR(50) PRIMARY KEY)
+(name VARCHAR(50) PRIMARY KEY);
 
 CREATE TABLE players
 (id VARCHAR(50) PRIMARY KEY,
-  alias VARCHAR(50),
-  team VARCHAR(50) REFERENCES teams(id))
+ alias VARCHAR(50),
+  team VARCHAR(50) REFERENCES teams(name));
 
 CREATE TABLE matches
 (id VARCHAR(30) PRIMARY KEY,
   year INTEGER,
   season INTEGER,
-  week INTEGER)
+  week INTEGER);

@@ -19,3 +19,9 @@ WHERE id = :id
 -- :doc delete a user given the id
 DELETE FROM users
 WHERE id = :id
+
+-- :name add-teams! :! :n
+-- :doc creates a new team record
+INSERT INTO teams
+(name)
+VALUES (:name)

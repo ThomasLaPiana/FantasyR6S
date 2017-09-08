@@ -23,7 +23,7 @@
 (defn upload-box []
   "This is the text-box that handles upload data"
   (let  [input (r/atom  "")
-         table-list (r/atom ["players" "matches"])
+         table-list (r/atom ["players" "matches" "teams"])
          target-table (r/atom (nth @table-list 0))]
     (fn  []
       [:div.upload-box
@@ -45,6 +45,7 @@
          "Upload"]]])))
 
 (defn upload-form []
+  "Structures the upload page components"
   [:div.upload-form
    [upload-title]
    [upload-box]])

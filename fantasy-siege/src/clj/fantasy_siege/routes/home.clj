@@ -8,8 +8,10 @@
   (layout/render "home.html"))
 
 (defn save-upload! [{:keys [params]}]
-  (println params)
-  (response/ok {:status :ok}))
+  (let [row (-> params :data)
+        table (-> params :table)]
+  (println row table)
+  (response/ok {:status :ok})))
 
 (defroutes home-routes
   (GET "/" [] (home-page))
