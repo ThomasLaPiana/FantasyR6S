@@ -30,3 +30,8 @@ VALUES (:team_name)
 -- :doc retrieve a team given the name
 SELECT * FROM teams
 WHERE team_name = :team_name
+
+-- :name delete-team! :! :n
+-- :doc delete a team given the id
+DELETE FROM teams
+WHERE team_name = :team_name
