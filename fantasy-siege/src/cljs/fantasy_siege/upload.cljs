@@ -23,7 +23,7 @@
 (defn upload-box []
   "This is the text-box that handles upload data"
   (let  [input (r/atom  "")
-         table-list (r/atom ["players" "matches" "teams"])
+         table-list (r/atom ["" "players" "matches" "teams"])
          target-table (r/atom (nth @table-list 0))]
     (fn  []
       [:div.upload-box
@@ -33,10 +33,11 @@
                  :on-change #(reset! input  (-> % .-target .-value))}]
        [:div
         [:select
+         {:on-change #(reset! target-table (-> % .-target .-value))}
          (for [item @table-list]
          ^{:key item}
          [:option {:value item
-                   :on-click #(reset! target-table (-> % .-target .-value))}
+                   }
           item])]
         [:button.btn.btn-primary
          {:type :submit
