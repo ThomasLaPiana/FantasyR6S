@@ -34,3 +34,12 @@
             :last_login nil
             :is_active  nil}
            (db/get-user t-conn {:id "1"})))))
+
+(deftest test-teams
+  (jdbc/with-db-transaction [t-conn *db*]
+    (jdbc/db-set-rollback-only! t-conn)
+    (is (= 1 (db/create-team!
+               t-conn
+               {:team_name "MSB"})))
+    (is (= {:team_name "MSB"}
+           (db/get-team t-conn {:team_name "MSB"})))))
