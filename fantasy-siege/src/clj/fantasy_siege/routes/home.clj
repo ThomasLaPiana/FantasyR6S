@@ -1,5 +1,6 @@
 (ns fantasy-siege.routes.home
   (:require [fantasy-siege.layout :as layout]
+            [fantasy-siege.db.core :as db]
             [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :as response]
             [clojure.string :refer [split-lines trim]]
@@ -9,20 +10,19 @@
 (defn home-page []
   (layout/render "home.html"))
 
-(defn parse-upload [csv-data]
+(defn parse-upload [csv-string]
   "Parse the uploaded data into a seq of hashmaps"
-  (-> csv-data
+  (-> csv-string
       (parse-csv :key :keyword)))
 
 (defn save-upload! [{:keys [params]}]
   "Upload the data submitted data by the admins through the upload page"
   (let [table (-> params :table)
         data-seq (parse-upload (-> params :data))]
-    (do (println table data-seq)
-        (response/ok {:status :ok}))))
-
-(save-upload! {:params {:data "name\ntest" :table "teams"}})
-
+    (case table
+      "teams"  (doall (map db/create-team! data-seq))
+      (println "upload failed"))
+    (response/ok {:status :ok})))
 
 (defroutes home-routes
   "Define the home-routes"
