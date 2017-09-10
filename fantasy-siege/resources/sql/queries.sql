@@ -20,8 +20,13 @@ WHERE id = :id
 DELETE FROM users
 WHERE id = :id
 
--- :name add-teams! :! :n
+-- :name create-team! :! :n
 -- :doc creates a new team record
 INSERT INTO teams
-(name)
-VALUES (:name)
+(team_name)
+VALUES (:team_name)
+
+-- :name get-team :? :1
+-- :doc retrieve a team given the name
+SELECT * FROM teams
+WHERE team_name = :team_name

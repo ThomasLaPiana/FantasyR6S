@@ -1,0 +1,5 @@
+CREATE TABLE matches
+(id VARCHAR(30) PRIMARY KEY,
+  year INTEGER,
+  season INTEGER,
+  week INTEGER);

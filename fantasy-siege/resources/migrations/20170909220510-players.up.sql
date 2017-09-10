@@ -1,0 +1,4 @@
+CREATE TABLE players
+(id VARCHAR(50) PRIMARY KEY,
+ alias VARCHAR(50),
+  team VARCHAR(50));
