@@ -7,7 +7,6 @@
             [fantasy-siege.ajax :refer [load-interceptors!]]
             [ajax.core :refer [GET POST]]
             [fantasy-siege.navbar :refer [navbar]]
-            [fantasy-siege.home :refer [home-page]]
             [fantasy-siege.user :refer [user-dashboard]]
             [fantasy-siege.upload :refer [upload-form]])
   (:import goog.History))

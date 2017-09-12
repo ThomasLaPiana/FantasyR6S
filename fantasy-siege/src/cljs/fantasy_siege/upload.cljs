@@ -15,10 +15,9 @@
          :handler #(.log js/console (str "response:" %))
          :error-handler #(.log js/console (str "error:" %))}))
 
-
 (defn upload-title []
   "Contains the title of the upload page"
-  [:div.upload-title "Upload New Player Data Here"])
+  [:div.upload-title "Upload Data Here"])
 
 (defn upload-box []
   "This is the text-box that handles upload data"
