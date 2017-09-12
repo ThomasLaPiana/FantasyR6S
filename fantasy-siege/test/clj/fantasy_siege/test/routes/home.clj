@@ -17,10 +17,10 @@
 (deftest test-save-upload!
   (is (= {:status 200, :headers {}, :body {:status :ok}}
          (save-upload! {:params
-                        {:data "team_name\ntest\nthis\nfunc" :table "team"}})))
+                        {:data "team_name\ntest\nthis\nfunc" :table "teams"}})))
   (is (= {:status 500, :headers {}, :body {:errors {:server-error ["Failed to upload the data!"]}}}
          (save-upload! {:params
-                        {:data "team_name\ntest\nthis\nfunc" :table "team"}})))
+                        {:data "team_name\ntest\nthis\nfunc" :table "teams"}})))
   (is (= [1 1 1]
          (map db/delete-team! [{:team_name "test"}
                           {:team_name "this"}

@@ -19,7 +19,7 @@
   "Upload the data submitted data by the admins through the upload page"
   (let [table (-> params :table)
         data-seq (parse-upload (-> params :data))
-        query-lookup {:team db/create-team!}]
+        query-lookup {:teams db/create-team!}]
     (try
       (doall (map (get  query-lookup (keyword table)) data-seq))
       (response/ok {:status :ok})
