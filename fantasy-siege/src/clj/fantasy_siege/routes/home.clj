@@ -18,11 +18,14 @@
 (defn save-upload! [{:keys [params]}]
   "Upload the data submitted data by the admins through the upload page"
   (let [table (-> params :table)
-        data-seq (parse-upload (-> params :data))]
-    (case table
-      "teams"  (doall (map db/create-team! data-seq))
-      (println "upload failed"))
-    (response/ok {:status :ok})))
+        data-seq (parse-upload (-> params :data))
+        query-lookup {:team db/create-team!}]
+    (try
+      (doall (map (get  query-lookup (keyword table)) data-seq))
+      (response/ok {:status :ok})
+      (catch Exception e
+        (response/internal-server-error
+          {:errors {:server-error ["Failed to upload the data!"]}})))))
 
 (defroutes home-routes
   "Define the home-routes"
