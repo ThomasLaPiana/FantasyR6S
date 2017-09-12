@@ -42,6 +42,4 @@
                t-conn
                {:team_name "MSB"})))
     (is (= {:team_name "MSB"}
-           (db/get-team t-conn {:team_name "MSB"})))
-    (is (= 1
-           (db/delete-team! t-conn {:team_name "MSB"})))))
+           (db/get-team t-conn {:team_name "MSB"})))))
