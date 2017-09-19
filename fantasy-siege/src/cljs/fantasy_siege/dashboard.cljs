@@ -4,7 +4,7 @@
 
 (defn player-list []
   "list the players that this user recruited"
-  [:div "This is the user dashboard"])
+  [:div.home-title "This is the user dashboard"])
 
 (defn user-dashboard []
   "display information specific to the user"
