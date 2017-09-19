@@ -5,6 +5,10 @@ body {
   background-color: #191919;
   color: white;
 }
+.home-title {
+  margin: auto;
+  text-align: center;
+}
 .upload-title {
   margin: auto;
   text-align: center;
