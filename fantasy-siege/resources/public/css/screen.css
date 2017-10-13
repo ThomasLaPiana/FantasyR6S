@@ -5,6 +5,18 @@ body {
   background-color: #191919;
   color: white;
 }
+.modal-dialog {
+  z-index: 100;
+  margin: auto;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  color: black;
+}
+.modal-backdrop {
+  z-index: 1;
+}
 .home-title {
   margin: auto;
   text-align: center;

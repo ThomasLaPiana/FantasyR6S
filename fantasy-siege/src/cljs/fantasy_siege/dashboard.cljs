@@ -6,6 +6,12 @@
   "list the players that this user recruited"
   [:div.home-title "This is the user dashboard"])
 
+(defn modal []
+  (when-let [session-modal (session/get :modal)]
+    [session-modal]))
+
 (defn user-dashboard []
   "display information specific to the user"
-  [player-list])
+  [:div
+   [modal]
+   [player-list]])

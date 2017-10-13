@@ -17,6 +17,7 @@
                  [markdown-clj "1.0.0"]
                  [metosin/muuntaja "0.3.2"]
                  [metosin/ring-http-response "0.9.0"]
+                 [metosin/ring-swagger "0.24.2"]
                  [mount "0.1.11"]
                  [org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.908" :scope "provided"]
